@@ -19,7 +19,7 @@ export default function Home({ products }) {
         <Banner />
 
         {/* Product feed */}
-        <ProductFeed products={products} />
+        <ProductFeed products={products} key={products.id} />
       </main>
     </div>
   );
