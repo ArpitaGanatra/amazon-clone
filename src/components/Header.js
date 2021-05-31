@@ -16,9 +16,9 @@ function Header() {
   const items = useSelector(selectItems);
 
   return (
-    <header>
+    <header className="sticky z-50 top-0">
       {/* Top Nav */}
-      <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2">
+      <div className="flex items-center bg-amazon_blue p-1 flex-grow py-2 ">
         <div className="mt-2 flex items-center flex-grow sm:flex-grow-0">
           <Image
             onClick={() => router.push("/")}
@@ -45,7 +45,7 @@ function Header() {
             <p> {session ? `Hello ${session.user.name}` : "Sign In"}</p>
             <p className="font-extrabold md:text-sm">Account & Lists</p>
           </div>
-          <div className="link">
+          <div onClick={() => router.push("/orders")} className="link">
             <p className="font-extrabold md:text-sm">Returns</p>
             <p className="font-extrabold md:text-sm">& Orders</p>
           </div>
